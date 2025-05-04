@@ -47,7 +47,7 @@ cd ShadowStrike
 2. **Make the script executable**
 
 ```bash
-chmod +x ShadowStrike.sh
+sudo chmod +x ShadowStrike.sh
 ```
 
 3. **Run the script**
@@ -61,7 +61,7 @@ chmod +x ShadowStrike.sh
 You'll be prompted to enter numbers (space-separated) for categories you'd like to install. Example:
 
 ```
-Your choice: 1 3 5
+Your choice: 1 3 5 any one according to your needs
 ```
 
 ---
