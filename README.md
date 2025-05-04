@@ -40,7 +40,7 @@
 1. **Clone the repository**
 
 ```bash
-https://github.com/S0H4M-BreachFinder/Shadow-Strike.git
+git clone https://github.com/S0H4M-BreachFinder/Shadow-Strike.git
 cd ShadowStrike
 ````
 
