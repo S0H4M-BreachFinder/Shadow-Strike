@@ -106,9 +106,7 @@ Your choice: 1 3 5
 
 ---
 
-## 📃 License
 
-MIT License — see [`LICENSE`](./LICENSE) for details.
 
 ---
 
