@@ -25,6 +25,7 @@ echo "6) Wireless Attacks"
 echo "7) Exploitation Tools"
 echo "8) Sniffing & Spoofing"
 echo "9) Post Exploitation"
+echo "10) Install DVWA (Damn Vulnerable Web Application)"
 read -p "Your choice: " choices
 
 # Tool options
@@ -38,17 +39,34 @@ declare -A options=(
   [7]="kali-tools-exploitation"
   [8]="kali-tools-sniffing-spoofing"
   [9]="kali-tools-post-exploitation"
+  [10]="dvwa"
 )
 
 # Update and install
+echo ""
 echo "Updating system repositories..."
 sudo apt update && sudo apt upgrade -y
 
 for choice in $choices; do
   package=${options[$choice]}
+
+  if [ "$choice" -eq 10 ]; then
+    echo ""
+    echo "=============================================="
+    echo "🔧 Downloading and installing DVWA..."
+    echo "=============================================="
+    wget https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh -O Install-DVWA.sh
+    chmod +x Install-DVWA.sh
+    sudo ./Install-DVWA.sh
+    echo ""
+    echo "DVWA installation complete! Access it via: http://localhost/dvwa"
+    continue
+  fi
+
   if [ -n "$package" ]; then
+    echo ""
     echo "Installing $package..."
-    sudo apt install -y $package
+    sudo apt install -y "$package"
   else
     echo "Invalid option: $choice"
   fi
